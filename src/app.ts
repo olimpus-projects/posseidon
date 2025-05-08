@@ -1,18 +1,8 @@
-require('dotenv').config();
-import express from 'express'
-import cors from 'cors';
-import bodyParser from 'body-parser';
 
-const app = express();
 
-app.use(cors());
+// recive file from client and save it to server
 
-app.use(express.json());
-app.use(express.urlencoded());
+// extract and parse the file to json, in this layer we defined what parameters we want to extract from the file and how we want to parse it
 
-app.use(bodyParser.json());                        
-app.use(bodyParser.urlencoded({ extended: true }));
-
-export { app };
-
+// convert the file registers in tasks to a json object and response this to client in streaming mode
 
